@@ -4,19 +4,22 @@
 
 int main(int argc, char* argv[]) {
 
+    int time = uptime();
+
     int ret_val = fork();
+
     if (ret_val < 0) {
         printf("Error\n");
         return 1;
     } 
     else if (ret_val == 0) {
-        printf("Child PID: %d\n", getpid());
+        exec(argv[1], &argv[2]);
     }
     else {
-        int waitValue = wait(0);
-        printf("Parent PID: %d, parent of (PID: %d)", getpid(), waitValue);
-    }
-
+        wait(0);
+        int newTime = uptime();
+        printf("Time: %d\n", (newTime - time));
+    }    
 
     return 0;
 }

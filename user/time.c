@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
     else {
         wait(0);
         int newTime = uptime();
-        printf("Time: %d\n", (newTime - time));
+        printf("Real-time in ticks: %d\n", ((newTime - time) * 100));
     }    
 
     return 0;

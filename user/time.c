@@ -13,8 +13,8 @@ int main(int argc, char* argv[]) {
         printf("Child PID: %d\n", getpid());
     }
     else {
-        int ret_val_wait = wait(NULL);
-        printf("Parent PID: %d", )
+        int waitValue = wait(0);
+        printf("Parent PID: %d, parent of (PID: %d)", getpid(), waitValue);
     }
 
 

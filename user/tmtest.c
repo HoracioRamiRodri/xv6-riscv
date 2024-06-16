@@ -4,7 +4,9 @@
 
 int main() {
 
-    
+    timeins();
+    sleep(1000);
+    timeins();
 
     return 0;
 }

@@ -92,5 +92,6 @@ sys_uptime(void)
 
 sys_timeins(void) 
 {
-  
+  int ticks = sys_uptime();
+
 }

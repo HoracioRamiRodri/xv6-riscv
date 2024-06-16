@@ -4,9 +4,19 @@
 
 int main(int argc, char* argv[]) {
 
-    //int retval = fork();
-    //printf("Created child process\n");
-    printf("Hello! This is a test!\n");
+    int ret_val = fork();
+    if (ret_val < 0) {
+        printf("Error\n");
+        return 1;
+    } 
+    else if (ret_val == 0) {
+        printf("Child PID: %d\n", getpid());
+    }
+    else {
+        int ret_val_wait = wait(NULL);
+        printf("Parent PID: %d", )
+    }
+
 
     return 0;
 }

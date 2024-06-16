@@ -90,8 +90,10 @@ sys_uptime(void)
   return xticks;
 }
 
+uint64
 sys_timeins(void) 
 {
+
   int ticks = sys_uptime();
   int seconds = ticks / CPUFREQ;
   return seconds * 1000; 

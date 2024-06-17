@@ -4,9 +4,17 @@
 
 int main() {
 
-    timeins();
+    int x = timeins();
+    printf("Num: %d\n", x);
+
     sleep(1000);
-    timeins();
+    int y = timeins();
+    printf("New num: %d\n", y);
+
+    int difference = y - x;
+
+    printf("Time in seconds: %d\n", difference);
+
 
     return 0;
 }

@@ -94,8 +94,18 @@ uint64
 sys_timeins(void) 
 {
 
-  int ticks = sys_uptime();
+  uint xticks;
+
+  acquire(&tickslock);
+  xticks = ticks;
+  release(&tickslock);
+
+  int ticks = xticks;
+
+  //return ticks;
+
   int seconds = ticks / CPUFREQ;
-  return seconds * 1000; 
+  return seconds;
+  //return seconds * 1000; 
 
 }

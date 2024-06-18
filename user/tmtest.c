@@ -8,7 +8,7 @@ int main() {
     sleep(1000);
     int y = timeins();
 
-    printf("Time in seconds: %d\nTime in milliseconds: %d\n", (y - x), ((y - x) * 1000));
+    printf("Time in milliseconds: %d\n", (y - x));
 
 
     return 0;

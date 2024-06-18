@@ -99,6 +99,6 @@ sys_timeins(void)
   xticks = ticks;
   release(&tickslock);
 
-  return xticks / CPUFREQ; 
+  return (xticks / CPUFREQ) * 1000; 
 
 }

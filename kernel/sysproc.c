@@ -95,17 +95,10 @@ sys_timeins(void)
 {
 
   uint xticks;
-
   acquire(&tickslock);
   xticks = ticks;
   release(&tickslock);
 
-  int ticks = xticks;
-
-  //return ticks;
-
-  int seconds = ticks / CPUFREQ;
-  return seconds;
-  //return seconds * 1000; 
+  return xticks / CPUFREQ; 
 
 }

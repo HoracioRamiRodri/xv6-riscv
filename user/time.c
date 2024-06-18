@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
     int ret_val = fork();
 
     if (ret_val < 0) {
-        printf("Error\n");
+        printf("Error: Child process couldn't be created\n");
         return 1;
     } 
     else if (ret_val == 0) {
